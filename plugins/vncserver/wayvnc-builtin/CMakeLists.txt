@@ -81,7 +81,7 @@ set(wayvnc_SOURCES
 	${CLIENT_PROTOCOL_SRCS}
 )
 
-set_source_files_properties(${wayvnc_SOURCES} PROPERTIES COMPILE_FLAGS "-Wno-implicit-function-declaration -Dmain=wayvnc_main")
+set_source_files_properties(${wayvnc_SOURCES} PROPERTIES COMPILE_FLAGS "-Wno-implicit-function-declaration -Wno-unused-result -Dmain=wayvnc_main")
 
 build_veyon_plugin(builtin-wayvnc-server
 	BuiltinWayVncServer.cpp
