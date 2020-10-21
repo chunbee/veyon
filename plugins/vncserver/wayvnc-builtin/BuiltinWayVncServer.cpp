@@ -82,7 +82,7 @@ void BuiltinWayVncServer::prepareServer()
 
 
 
-void BuiltinWayVncServer::runServer( int serverPort, const Password& password )
+bool BuiltinWayVncServer::runServer( int serverPort, const Password& password )
 {
 	QStringList cmdline{} ;
 
@@ -116,7 +116,7 @@ void BuiltinWayVncServer::runServer( int serverPort, const Password& password )
 	}
 
 	// run wayvnc-server
-	wayvnc_main( argc, argv );
+	const auto result = wayvnc_main( argc, argv );
 
 	for( int i = 0; i < argc; ++i )
 	{
@@ -124,6 +124,8 @@ void BuiltinWayVncServer::runServer( int serverPort, const Password& password )
 	}
 
 	delete[] argv;
+
+	return result == 0;
 }
 
 
