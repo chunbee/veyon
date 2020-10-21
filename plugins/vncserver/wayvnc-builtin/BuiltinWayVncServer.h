@@ -66,6 +66,16 @@ public:
 		return QStringLiteral( "Tobias Junghans" );
 	}
 
+	Plugin::Flags flags() const override
+	{
+		return Plugin::ProvidesDefaultImplementation;
+	}
+
+	QStringList supportedSessionTypes() const override
+	{
+		return { QStringLiteral("wayland") };
+	}
+
 	QWidget* configurationWidget() override;
 
 	void prepareServer() override;
