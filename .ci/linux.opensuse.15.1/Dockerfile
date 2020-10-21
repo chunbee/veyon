@@ -5,6 +5,7 @@ RUN \
 	zypper --gpg-auto-import-keys install -y git gcc-c++ make cmake rpm-build fakeroot \
 		libqt5-qtbase-devel libqt5-qtbase-private-headers-devel libqt5-linguist-devel libqt5-qttools-devel libqt5-qtquickcontrols2 libQt5QuickControls2-devel \
 		libXtst-devel libXrandr-devel libXinerama-devel libXcursor-devel libXrandr-devel libXdamage-devel libXcomposite-devel libXfixes-devel \
+		wayland-devel libgbm-devel libdrm-devel libpixman-1-0-devel libxkbcommon-devel \
 		libfakekey-devel \
 		libjpeg8-devel \
 		zlib-devel \
